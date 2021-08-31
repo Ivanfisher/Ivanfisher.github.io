@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ivan Fisher</title>
         <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <script src="JS/website.js" defer></script>
     </head>
 
     <!-- Body -->
@@ -12,7 +13,7 @@
         
         <!-- Navbar -->
         <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
+            <a href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a href="#Contact">Contact</a>
@@ -49,10 +50,50 @@
 
         <!-- ABOUT SECTION -->
         <div class="Row" id="About">
-            <div class="Column_2">
-                <img src="Images/coding-1.jpg" alt="">
+            <div class="photo_container">
+                <!-- SLIDESHOW -->
+                <div id="myModal" class="modal">
+                    <div class="mySlides">
+                        
+                        <img src="Images/myself_1.jpg" alt="Photo of myself">
+                        
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="mySlides">
+                        <img src="Images/C_Sharp_and_Dot_NET.png" alt="C# Logo">
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="mySlides">
+                        <img src="Images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS and JavaScript Logo">
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="mySlides">
+                        <img src="Images/SQL_and_Database.jpg" alt="SQL Logo">
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="mySlides">
+                        <img src="Images/coding-1.jpg" alt="Computer">
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
             </div>
-            <div class="Column_1">
+            <!-- END SLIDESHOW -->
+            <div class="aboutMe">
                 <h1>About</h1>
                 <p>
                     I am an aspiring software developer who loves to code! I am currently attending
@@ -68,7 +109,7 @@
 
         <!-- GITHUB SECTION-->
         <div class="Row" id="GitHub">
-            <div class="Column_1">
+            <div class="Column_1 github">
                 <h1>GitHub</h1>
                 <p>
                     You can view my coding projects on my GitHub profile here:
@@ -76,9 +117,10 @@
                     <p class="center"><a href="https://github.com/Ivanfisher" target="_blank">Ivan Fisher Github</a></p>
                 </p>
             </div>
-            <div class="Column_2">
-                <a href="https://github.com/Ivanfisher" target="_blank"><img src="Images/GitHub.png" alt="GitHub Logo"></a>
+            <div class="Column_2 githubLogo">
+                <img src="Images/GitHub.png" alt="GitHub Logo">
             </div>
+            
         </div>
 
         <!-- END GITHUB SECTION -->
@@ -92,11 +134,11 @@
                 <h1 class="email">Contact</h1>
                 <form action="" method="POST">
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" name="name" placeholder="Please enter your name here" required>
                     <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
                     <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here" required>
                         <input type="submit" value="SUBMIT">
                 </form>
             </div>
