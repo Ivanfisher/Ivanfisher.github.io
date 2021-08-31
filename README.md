@@ -1,3 +1,3 @@
 # Personal Website
 
-#### These projects are for my personal website.
+#### This repository is for my personal website.
