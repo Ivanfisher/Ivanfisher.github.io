@@ -109,7 +109,7 @@
 
         <!-- GITHUB SECTION-->
         <div class="Row" id="GitHub">
-            <div class="Column_1 github">
+            <div class="github">
                 <h1>GitHub</h1>
                 <p>
                     You can view my coding projects on my GitHub profile here:
@@ -117,7 +117,7 @@
                     <p class="center"><a href="https://github.com/Ivanfisher" target="_blank">Ivan Fisher Github</a></p>
                 </p>
             </div>
-            <div class="Column_2 githubLogo">
+            <div class="githubLogo">
                 <img src="Images/GitHub.png" alt="GitHub Logo">
             </div>
             
@@ -132,15 +132,19 @@
             </div>
             <div class="Column_1">
                 <h1 class="email">Contact</h1>
-                <form action="" method="POST">
+                <form action="https://formspree.io/f/mnqlojwk" method="POST" id="myForm">
                     <label>Name:</label>
-                        <input type="text" name="name" placeholder="Please enter your name here" required>
+                        <input type="text" name="name" minlength="2" maxlength="30" required>
                     <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
+                        <input type="email" id="email" name="email" required>
                     <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here" required>
-                        <input type="submit" value="SUBMIT">
+                        <textarea name="message" id="message" cols="30" rows="4" required></textarea>
+                        <input type="submit" value="SUBMIT" id="button">
                 </form>
+                <!-- div displays once user submits form -->
+                <div class="status" id="myFormStatus">
+                    Thanks for the submission!
+                </div>
             </div>
         </div>
 
