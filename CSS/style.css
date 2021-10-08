@@ -222,11 +222,33 @@ q {
     margin: auto;
 }
 
-.Column_1 {
+.github {
     float: left;
     width: 50%;
     padding: 10px;
     height: 25em;
+    background-color: #eee;
+    overflow: auto;
+    margin: auto;
+}
+
+.githubLogo {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background-color: #555;
+    height: 25em;
+    margin: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 26.5em;
     background-color: #eee;
     overflow: auto;
     margin: auto;
@@ -237,7 +259,7 @@ q {
     width: 50%;
     padding: 10px;
     background-color: #555;
-    height: 25em;
+    height: 26.5em;
     margin: auto auto;
     display: flex;
     align-items: center;
@@ -255,7 +277,8 @@ q {
     padding: 0;
 }
 
- .column_2 img:hover {
+
+.column_2 img:hover {
     filter: brightness(110%);
     transition: transform 1s;
     transform: scale(1.1);
@@ -274,13 +297,17 @@ q {
     margin-top:1%;
 }
 
+.column_1 form {
+    margin: 0;
+}
+
 label {
     font-weight: 600;
     font-size: 1.05em;
     font-family: Calibri;
 }
 
-input[type=text] {
+input[type=text], input[type=email], textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #666;
@@ -293,11 +320,11 @@ input[type=text] {
     font-weight: 600;
 }
 
-input[type=text]:hover {
+input[type=text]:hover, input[type=email]:hover, textarea:hover {
     box-shadow: 0 0 5px #2200cc;
 }
 
-input[type=submit] {
+input[type=submit], .status {
     background-color: #222;
     color: white;
     font-weight: 900;
@@ -306,8 +333,7 @@ input[type=submit] {
     border-radius: 5px;
     cursor: pointer;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 4px auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -316,6 +342,12 @@ input[type=submit]:hover {
     color: black;
     transform: scale(1.2);
     transition: transform 1.5s;
+}
+
+.status {
+    display: none;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 /*-- END CONTACT FORM STYLING --*/
@@ -342,14 +374,12 @@ Footer p {
         width: 70vw;
     }
 
-    .aboutMe {
+    .aboutMe, .Column_1, .github, .status {
         width: 100%;
         height: auto;
     }
 
     .Column_1 {
-        width: 100%;
-        height: auto;
         background-color: #555;
     }
 
@@ -358,7 +388,7 @@ Footer p {
         padding-bottom: 20px;
     }
 
-    .Column_2 {
+    .Column_2, .githubLogo {
         display: none;
     }
 
