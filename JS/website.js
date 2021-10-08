@@ -47,3 +47,31 @@ function showSlides(n) {
         captionText.innerHTML = "Hi";
     }
 }
+
+var form = document.getElementById("myForm");
+// This function specifies what to do once form is submitted
+async function handleSubmit(event) {
+    // This function prevents default action of redirecting page
+    event.preventDefault();
+    var status = document.getElementById("myFormStatus");
+    var data = new FormData(event.target);
+    // Determining if submission was successful then choosing action based on result
+    fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+    }).then(response => {
+    // Setting button display to none and then display myFormStatus instead
+    document.getElementById("button").style.display = "none";
+    document.getElementById("myFormStatus").style.display = "block";
+    form.reset()
+    }).catch(error => {
+    // Setting button display to none and then display myFormStatus instead
+    document.getElementById("button").style.display = "none";
+    document.getElementById("myFormStatus").style.display = "block";
+    status.innerHTML = "Oops! There was a problem submitting your form.."
+    });
+}
+form.addEventListener("submit", handleSubmit)
