@@ -29,18 +29,15 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
     // MAKING THE RIGHT SENTENCE DISPLAY FOR THE RIGHT PHOTO
     if ((slideIndex-1) == 0) {
-        captionText.innerHTML = "I will be happy to assist you with your project!";
+        captionText.innerHTML = "I have experience in C#, .NET Framework, ASP.NET, MVC,";
     }
     else if ((slideIndex-1) == 1) {
-        captionText.innerHTML = "I am trained in C#, .NET Framework, ASP.NET, MVC,";
-    }
-    else if ((slideIndex-1) == 2) {
         captionText.innerHTML = "HTML, CSS and JavaScript,";
     }
-    else if ((slideIndex-1) == 3) {
+    else if ((slideIndex-1) == 2) {
         captionText.innerHTML = "back end development, databases and SQL.";
     }
-    else if ((slideIndex-1) == 4) {
+    else if ((slideIndex-1) == 3) {
         captionText.innerHTML = "Please contact me today!";
     }
     else {
